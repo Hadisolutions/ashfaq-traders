@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2196f3; /* Accent color */
+    color: #fff;
+}
+
+.start-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff4081; /* Pink accent */
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333333; /* Neutral color scheme */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    animation: fusionAnimation 2s ease-in-out;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #4567b7; /* Calming color scheme */
+}
+
+.progress-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 300px;
+    background: #4567b7; /* Calming color scheme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: liquidEffect 3s infinite;
+}
+
+.form-container {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: bookPageAnimation 1s ease-in-out;
+}
+
+.gender-button {
+    background: #2196f3; /* Accent color */
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.gender-button[data-gender="female"] {
+    background: #ff4081; /* Pink for female */
+}
+
+.gender-button:hover {
+    background: #1565c0; /* Darker accent color */
+}
+
+.form-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    animation: floatingEffect 3s infinite;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #8bc34a; /* Calming color scheme */
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Icons for fields */
+.icon-gender:before { content: '\1F464'; }
+.icon-student:before { content: '\1F464'; }
+.icon-picture:before { content: '\1F4F7'; }
+.icon-father:before { content: '\1F474'; }
+.icon-salary:before { content: '\1F4B0'; }
+.icon-occupation:before { content: '\1F4C3'; }
+.icon-income:before { content: '\1F4B5'; }
+.icon-dob:before { content: '\1F4C5'; }
+.icon-school:before { content: '\1F3EB'; }
+.icon-board:before { content: '\1F4DD'; }
+.icon-rollno:before { content: '\1F4C8'; }
+.icon-marks:before { content: '\1F4D3'; }
+.icon-totalmarks:before { content: '\1F4D4'; }
+.icon-address:before { content: '\1F4CD'; }
+.icon-subject:before { content: '\1F4D2'; }
+.icon-sport:before { content: '\1F3C0'; }
+.icon-hobby:before { content: '\1F3B8'; }
+.icon-personality:before { content: '\1F4C0'; }
+.icon-career:before { content: '\1F3EB'; }
+.icon-review:before { content: '\1F4C8'; }
+
+@keyframes fusionAnimation {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bookPageAnimation {
+    from { transform: rotateX(90deg); }
+    to { transform: rotateX(0deg); }
+}
+
+@keyframes liquidEffect {
+    0% { transform: scaleX(0); }
+    50% { transform: scaleX(1); }
+    100% { transform: scaleX(0); }
+}
+
+@keyframes floatingEffect {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

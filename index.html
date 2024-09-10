@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Hunt - Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to Talent Hunt</h1>
+        <button class="start-button">Start</button>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#gender">Gender</a></li>
+            <li><a href="#studentName">Student Name</a></li>
+            <li><a href="#profilePicture">Profile Picture</a></li>
+            <li><a href="#fathersName">Father's Name</a></li>
+            <li><a href="#fathersSalary">Father's Salary</a></li>
+            <li><a href="#fathersOccupation">Father's Occupation</a></li>
+            <li><a href="#fathersIncome">Father's Income</a></li>
+            <li><a href="#dateOfBirth">Date of Birth</a></li>
+            <li><a href="#school">School</a></li>
+            <li><a href="#boardSelection">Board Selection</a></li>
+            <li><a href="#rollNo">9th Roll No</a></li>
+            <li><a href="#marks">9th Marks</a></li>
+            <li><a href="#totalMarks">9th Total Marks</a></li>
+            <li><a href="#address">Address</a></li>
+            <li><a href="#favoriteSubject">Favorite Subject</a></li>
+            <li><a href="#favoriteSport">Favorite Sport</a></li>
+            <li><a href="#hobby">Hobby</a></li>
+            <li><a href="#favoritePersonality">Favorite Personality</a></li>
+            <li><a href="#futureCareer">Future Career</a></li>
+            <li><a href="#review">Review & Submit</a></li>
+        </ul>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Form -->
+    <main class="form-container">
+        <form id="admissionForm">
+            <!-- Gender Selection -->
+            <section id="gender" class="form-section">
+                <h2><i class="icon-gender"></i> Select Gender</h2>
+                <button class="gender-button" data-gender="male">Male</button>
+                <button class="gender-button" data-gender="female">Female</button>
+            </section>
+
+            <!-- Student Name -->
+            <section id="studentName" class="form-section">
+                <h2><i class="icon-student"></i> Student Name</h2>
+                <input type="text" name="studentName" placeholder="Enter Student Name" class="form-field">
+            </section>
+
+            <!-- Profile Picture -->
+            <section id="profilePicture" class="form-section">
+                <h2><i class="icon-picture"></i> Profile Picture</h2>
+                <input type="file" name="profilePicture" accept="image/*" class="form-field" onchange="previewProfilePicture(event)">
+                <img id="profilePreview" class="profile-picture" src="#" alt="Profile Picture Preview">
+            </section>
+
+            <!-- Father's Name -->
+            <section id="fathersName" class="form-section">
+                <h2><i class="icon-father"></i> Father's Name</h2>
+                <input type="text" name="fathersName" placeholder="Enter Father's Name" class="form-field">
+            </section>
+
+            <!-- Father's Salary -->
+            <section id="fathersSalary" class="form-section">
+                <h2><i class="icon-salary"></i> Father's Salary</h2>
+                <input type="number" name="fathersSalary" placeholder="Enter Father's Salary" class="form-field">
+            </section>
+
+            <!-- Father's Occupation -->
+            <section id="fathersOccupation" class="form-section">
+                <h2><i class="icon-occupation"></i> Father's Occupation</h2>
+                <input type="text" name="fathersOccupation" placeholder="Enter Father's Occupation" class="form-field">
+            </section>
+
+            <!-- Father's Income -->
+            <section id="fathersIncome" class="form-section">
+                <h2><i class="icon-income"></i> Father's Income</h2>
+                <input type="number" name="fathersIncome" placeholder="Enter Father's Income" class="form-field">
+            </section>
+
+            <!-- Date of Birth -->
+            <section id="dateOfBirth" class="form-section">
+                <h2><i class="icon-dob"></i> Date of Birth</h2>
+                <input type="date" name="dateOfBirth" class="form-field">
+            </section>
+
+            <!-- School -->
+            <section id="school" class="form-section">
+                <h2><i class="icon-school"></i> School</h2>
+                <input type="text" name="school" placeholder="Enter School Name" class="form-field">
+            </section>
+
+            <!-- Board Selection -->
+            <section id="boardSelection" class="form-section">
+                <h2><i class="icon-board"></i> Board Selection</h2>
+                <select name="boardSelection" class="form-field">
+                    <option value="Bahawalpur">Bahawalpur</option>
+                    <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Gujranwala">Gujranwala</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Sahiwal">Sahiwal</option>
+                    <option value="Sargodha">Sargodha</option>
+                </select>
+            </section>
+
+            <!-- 9th Roll No -->
+            <section id="rollNo" class="form-section">
+                <h2><i class="icon-rollno"></i> 9th Roll No</h2>
+                <input type="text" name="rollNo" placeholder="Enter 6-Digit Roll No" class="form-field">
+            </section>
+
+            <!-- 9th Marks -->
+            <section id="marks" class="form-section">
+                <h2><i class="icon-marks"></i> 9th Marks</h2>
+                <input type="number" name="marks" placeholder="Enter 9th Marks" class="form-field">
+            </section>
+
+            <!-- 9th Total Marks -->
+            <section id="totalMarks" class="form-section">
+                <h2><i class="icon-totalmarks"></i> 9th Total Marks</h2>
+                <input type="number" name="totalMarks" placeholder="Enter Total Marks" class="form-field">
+                <div id="marksFeedback"></div>
+            </section>
+
+            <!-- Address -->
+            <section id="address" class="form-section">
+                <h2><i class="icon-address"></i> Address</h2>
+                <textarea name="address" placeholder="Enter Address" class="form-field"></textarea>
+            </section>
+
+            <!-- Favorite Subject -->
+            <section id="favoriteSubject" class="form-section">
+                <h2><i class="icon-subject"></i> Favorite Subject</h2>
+                <input type="text" name="favoriteSubject" placeholder="Enter Favorite Subject" class="form-field">
+            </section>
+
+            <!-- Favorite Sport -->
+            <section id="favoriteSport" class="form-section">
+                <h2><i class="icon-sport"></i> Favorite Sport</h2>
+                <input type="text" name="favoriteSport" placeholder="Enter Favorite Sport" class="form-field">
+            </section>
+
+            <!-- Hobby -->
+            <section id="hobby" class="form-section">
+                <h2><i class="icon-hobby"></i> Hobby</h2>
+                <input type="text" name="hobby" placeholder="Enter Hobby" class="form-field">
+            </section>
+
+            <!-- Favorite Personality -->
+            <section id="favoritePersonality" class="form-section">
+                <h2><i class="icon-personality"></i> Favorite Personality</h2>
+                <input type="text" name="favoritePersonality" placeholder="Enter Favorite Personality" class="form-field">
+            </section>
+
+            <!-- Future Career -->
+            <section id="futureCareer" class="form-section">
+                <h2><i class="icon-career"></i> Future Career</h2>
+                <input type="text" name="futureCareer" placeholder="Enter Future Career" class="form-field">
+            </section>
+
+            <!-- Review & Submit -->
+            <section id="review" class="form-section">
+                <h2><i class="icon-review"></i> Review & Submit</h2>
+                <button type="submit" class="submit-button">Submit</button>
+            </section>
+        </form>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
